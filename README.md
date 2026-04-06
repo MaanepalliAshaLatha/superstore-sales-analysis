@@ -1,41 +1,34 @@
-🏪 Global Superstore Profitability Analysis<br>
-Tools: MySQL, Excel, Pivot Tables<br>
-Dataset: 51,290 orders across 147 countries (2012–2015)<br>
-Goal: Find why a high-revenue global store was losing money.<br><br>
+🏪 <b>Global Superstore Profitability Analysis</b><br><br>
 
-📌 Business Problem<br>
-Global Superstore generated strong sales but inconsistent profitability. The goal was to identify which products, discount levels, and regions contributed most to losses and measure their impact.<br><br>
+<b>Tools:</b> MySQL, Excel<br>
+<b>Dataset:</b> 51,290 orders across 147 countries<br><br>
 
-🔍 Key Findings<br>
-• 84.83% of total losses were caused by discounts of 40% or more<br>
-• Tables were the highest loss contributor (around −$1.11L under high discounts)<br>
-• Machines were the second-highest loss contributor (around −$72K)<br>
-• Technology was the highest revenue category (about $827K)<br>
-• The Consumer segment represented 51% of all orders<br><br>
+<b>🔍 Problem</b><br>
+Despite strong revenue, the business was experiencing consistent profit losses without clear visibility into the root cause.<br><br>
 
-🛠️ SQL Techniques Used<br>
-• CTEs (WITH clause) to isolate discount groups<br>
-• CASE WHEN to classify orders into discount bands<br>
-• GROUP BY with SUM(Profit) to aggregate losses<br>
-• ORDER BY to rank sub-categories by total loss<br>
-• JOINs to merge order and product tables<br><br>
+<b>⚙️ Approach</b><br>
+• Analyzed 51,290 orders using SQL (CTEs, CASE WHEN, joins)<br>
+• Segmented transactions by discount levels and product sub-categories<br>
+• Built Excel dashboard to validate and visualize patterns<br><br>
 
-📊 Excel Dashboard<br>
-The multi-sheet Excel dashboard includes:<br>
-• Revenue by Segment (Consumer, Corporate, Home Office)<br>
-• Revenue by Category (Furniture, Office Supplies, Technology)<br>
-• Revenue by Region (West, East, Central, South)<br>
-• Lookup tool for segment-level drill-down<br>
-• Above-Average sales flag<br>
-• Value-Tier classification columns<br><br>
+<b>📊 Key Insights</b><br>
+• <b>84.83% of total losses</b> were driven by discounts ≥40%<br>
+• <b>Tables</b> generated the highest losses (~₹1.11L) under heavy discounting<br>
+• <b>Machines</b> contributed ~₹72K in losses<br>
+• Losses were <b>highly concentrated</b>, not distributed across all products<br><br>
 
-💡 Business Recommendations<br>
-1. Cap discounts at 30% for Tables and Machines<br>
-2. Flag sub-categories with negative margins for review<br>
-3. Margin recovery expected: ₹80,000–90,000<br><br>
+<b>💡 Business Impact</b><br>
+• Recommended <b>30% discount cap</b> on loss-making categories<br>
+• Estimated <b>₹80–90K margin recovery</b> without reducing order volume<br>
+• Identified specific sub-categories for pricing intervention<br><br>
 
-📁 Files in This Repository<br>
-• Global_Superstore2.csv — raw dataset<br>
-• queries.sql — SQL queries<br>
-• Analysis.xlsx — Excel pivot tables & dashboard<br>
-• README.md — documentation<br>
+<b>📈 Dashboard Highlights</b><br>
+• Consumer segment contributes <b>51% of total orders</b><br>
+• Technology is the top revenue category (~$827K)<br>
+• Regional performance differences identified for better decision-making<br><br>
+
+<b>📁 Repository Structure</b><br>
+• data/ → Raw dataset<br>
+• sql/ → SQL queries<br>
+• dashboard/ → Excel dashboard<br>
+• README.md → Documentation<br>
