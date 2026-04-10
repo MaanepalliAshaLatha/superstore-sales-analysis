@@ -3,29 +3,35 @@
 <b>Tools:</b> MySQL, Excel<br>
 <b>Dataset:</b> 51,290 orders across 147 countries<br><br>
 
-<b>🔍 Problem</b><br>
-Despite strong revenue, the business was experiencing consistent profit losses without clear visibility into the root cause.<br><br>
+<b>📌 Business Problem</b><br>
+The business was experiencing significant losses despite strong sales volume.<br>
+This analysis identifies how discounting impacts profitability across products and categories, and determines whether losses are driven by discount strategy or product-level pricing gaps.<br><br>
 
-<b>⚙️ Approach</b><br>
-• Analyzed 51,290 orders using SQL (CTEs, CASE WHEN, joins)<br>
-• Segmented transactions by discount levels and product sub-categories<br>
-• Built Excel dashboard to validate and visualize patterns<br><br>
+<b>❓ Key Questions</b><br>
+• At what discount level do products become unprofitable?<br>
+• How much loss is contributed by high-discount ranges?<br>
+• Which products are most affected by discounting?<br>
+• Are losses driven by discount strategy or inherent product issues?<br><br>
 
 <b>📊 Key Insights</b><br>
-• <b>84.83% of total losses</b> were driven by discounts ≥40%<br>
-• <b>Tables</b> generated the highest losses (~₹1.11L) under heavy discounting<br>
-• <b>Machines</b> contributed ~₹72K in losses<br>
-• Losses were <b>highly concentrated</b>, not distributed across all products<br><br>
+• Discounts ≥40% contribute ~85% of total losses — the exact tipping point for profitability.<br>
+• Machines and Phones remain profitable at low discounts but turn loss-making under heavy discounting.<br>
+• Tables and certain furniture items remain unprofitable even at lower discounts, indicating pricing or cost inefficiencies.<br><br>
 
-<b>💡 Business Impact</b><br>
-• Recommended <b>30% discount cap</b> on loss-making categories<br>
-• Estimated <b>₹80–90K margin recovery</b> without reducing order volume<br>
-• Identified specific sub-categories for pricing intervention<br><br>
+<b>🧩 Product Segmentation</b><br>
+🟢 <b>Discount-Sensitive:</b> Machines, Phones — profitable → become loss at high discounts.<br>
+🟡 <b>Weak-Margin Products:</b> Tables — low margin → easily turn loss.<br>
+🔴 <b>Always-Loss Items:</b> Some furniture — structural pricing issue.<br><br>
 
-<b>📈 Dashboard Highlights</b><br>
-• Consumer segment contributes <b>51% of total orders</b><br>
-• Technology is the top revenue category (~$827K)<br>
-• Regional performance differences identified for better decision-making<br><br>
+<b>💼 Business Recommendations</b><br>
+• Cap discounts at 40% for high-margin products and 20% for low-margin items to prevent losses.<br>
+• Avoid heavy discounting on weak products; use bundling strategies (e.g., tables + bookcases) to improve margins.<br>
+• Reevaluate pricing or cost structure for consistently loss-making items.<br><br>
+
+<b>📈 Approach</b><br>
+• Analyzed 51K+ orders using MySQL (CTEs, CASE WHEN, Joins).<br>
+• Segmented transactions by discount brackets, categories, and sub-categories.<br>
+• Built an Excel dashboard to validate trends and visualize loss concentration.<br><br>
 
 <b>📁 Repository Structure</b><br>
 • Data_Analysis.docx<br>
